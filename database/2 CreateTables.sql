@@ -1,0 +1,20 @@
+CREATE TABLE Books (
+book_id INT NOT NULL IDENTITY (1, 1) PRIMARY KEY,
+book_name VARCHAR (200) NOT NULL,
+ISBN VARCHAR (20) NOT NULL,
+autor VARCHAR (100) NOT NULL,
+);
+
+CREATE TABLE Category (
+cat_id INT NOT NULL IDENTITY (1, 1) PRIMARY KEY,
+cat_name VARCHAR (100) NOT NULL,
+create_date DATE NOT NULL DEFAULT GETDATE(),
+);
+
+CREATE TABLE Set_Category (
+book_id INT NOT NULL REFERENCES Books (book_id),
+cat_id INT NOT NULL REFERENCES Category (cat_id),
+);
+
+ALTER TABLE Set_Category
+ADD CONSTRAINT Set_Category_PK PRIMARY KEY (book_id, cat_id);
