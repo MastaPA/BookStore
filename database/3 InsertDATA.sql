@@ -1,4 +1,4 @@
-INSERT INTO Books (book_name, ISBN, autor) VALUES 
+INSERT INTO Books (bookName, isbn, autor) VALUES 
 ('The Hobbit', '978-0547928227', 'J. R. R. Tolkien'),
 ('I, Robot', '978-11110000060', 'Isaac Asimov'),
 ('The Hitchhikers Guide to the Galaxy', '978-01001234540', 'Duglas Adams'),
@@ -14,7 +14,7 @@ INSERT INTO Books (book_name, ISBN, autor) VALUES
 ('Super-Dragon', '978-0761458197', 'Steven Kroll')
 ;
 
-INSERT INTO Category (cat_name) VALUES 
+INSERT INTO Categories (catName) VALUES 
 ('Scince Fiction'),
 ('Fantasy'),
 ('Computers'),
@@ -23,7 +23,7 @@ INSERT INTO Category (cat_name) VALUES
 ('Politics')
 ;
 
-INSERT INTO Set_Category VALUES
+INSERT INTO SetCategory VALUES
 (1, 2),
 (2, 1),
 (3, 1),

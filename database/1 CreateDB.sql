@@ -1,1 +1,1 @@
-CREATE DATABASE Book_Store;
+CREATE DATABASE bookStore;
