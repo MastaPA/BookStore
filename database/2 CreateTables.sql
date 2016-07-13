@@ -11,10 +11,10 @@ catName VARCHAR (100) NOT NULL,
 createDate DATE NOT NULL DEFAULT GETDATE(),
 );
 
-CREATE TABLE SetCategory (
+CREATE TABLE BooksCategories (
 bookId INT NOT NULL REFERENCES Books (bookId),
 catId INT NOT NULL REFERENCES Categories (catId),
 );
 
-ALTER TABLE SetCategory
-ADD CONSTRAINT SetCategoryPK PRIMARY KEY (bookId, catId);
+ALTER TABLE BooksCategories
+ADD CONSTRAINT BooksCategoriesPK PRIMARY KEY (bookId, catId);
